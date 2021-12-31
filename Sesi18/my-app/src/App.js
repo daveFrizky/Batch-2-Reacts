@@ -11,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Header/>
+        <Header input='berhasil' batch='asu'/>
         <a
           className="App-link"
           href="https://reactjs.org"
