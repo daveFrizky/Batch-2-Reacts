@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
+import Button from './components/Button';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <Header input='berhasil' batch='asu'/>
+        <Button name="Klik aku dong"/>
         <a
           className="App-link"
           href="https://reactjs.org"
