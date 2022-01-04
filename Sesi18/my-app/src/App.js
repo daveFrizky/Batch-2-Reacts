@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
 import Button from './components/Button';
+<<<<<<< HEAD
 import { useState,useEffect } from 'react';
 
 function App() {
@@ -19,11 +20,16 @@ function App() {
             .then((response) => response.json())
             .then((data) => setTodos(data.slice(0,20)))//setTodos(data.slice(0,20)            
     })
+=======
+
+function App() {
+>>>>>>> 505a031860b2bf446d912b4bcbb37221550bfc06
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h5>Hello World! Its Reacts Time.</h5>
+<<<<<<< HEAD
         <table className="table">
             <tbody>
                 {
@@ -45,6 +51,13 @@ function App() {
         <Button name={temp}/>
         <Header input='berhasil' batch=' dong'/>
         
+=======
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <Header input='berhasil' batch='asu'/>
+        <Button name="Klik aku dong"/>
+>>>>>>> 505a031860b2bf446d912b4bcbb37221550bfc06
         <a
           className="App-link"
           href="https://reactjs.org"
