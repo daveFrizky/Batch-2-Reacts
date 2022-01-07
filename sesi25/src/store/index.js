@@ -1,5 +1,6 @@
-import {createStore,applyMiddleware} from 'redux'
+import {createStore,applyMiddleware, compose} from 'redux'
 import logger from 'redux-logger'
+import thunk from 'redux-thunk'
 // 1. state
 const initialState={
     counter:0
@@ -19,8 +20,10 @@ function counterReducer(state=initialState,action) {
             return state
     }
 }
+
 // 3. create store()
-const store=createStore(counterReducer,applyMiddleware(logger))
+const middleware = applyMiddleware(thunk,logger)
+const store=createStore(counterReducer, compose(middleware,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))
 
 //store.subscribe() menerima sebuah function sbg parameter
 store.subscribe(()=>console.log(store.getState()))
